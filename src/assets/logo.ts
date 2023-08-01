@@ -4,12 +4,13 @@ import logoTech from './logo-tech-radar.png'
 import logoGurdian from './logo-the-guardian.png'
 import logoVerge from './logo-the-verge.png'
 import logo from './logo.png'
-
+import logoTeam from './logo.svg'
 export {
     logo,
     logoGaddgets,
     logoGurdian,
     logoJakarta,
     logoTech,
-    logoVerge
+    logoVerge,
+    logoTeam
 }
