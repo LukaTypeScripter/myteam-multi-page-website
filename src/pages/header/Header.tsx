@@ -5,12 +5,29 @@ import { logoTeam } from '../../assets/logo'
 import { iconClose, iconHamburger } from '../../assets/icons'
 import useMediaQuery from '../../hooks/useMediaQuery'
 import Button from '../../components/button/Button'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { bgPaternAboutMobileNav } from '../../assets/bgs'
 const Header = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width:724px)");
   const [isOpen,setisOpen] = useState(false)
   const navigate = useNavigate()
+  const modalRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (
+        modalRef.current &&
+        !modalRef.current.contains(event.target as Node)
+      ) {
+        setisOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
   return (
     <>
     <Headers>
@@ -36,15 +53,15 @@ const Header = () => {
         )}
           {isAboveMediumScreens && isOpen && (
             <div className='btn__cont'>
-          <Button Text='Contact Us' padding='9px 30px 8px' borderRadius='24px' border='2px solid transparent' bgColor='transparent' color='#fff' borderColor='#fff'/>
+          <Button Text='Contact Us' padding='9px 30px 8px' borderRadius='24px' border='2px solid transparent' bgColor='transparent' color='#fff' borderColor='#fff'onClick={() => navigate('/contact')}/>
             </div>
             
           )}
         { isOpen&& !isAboveMediumScreens && (
           <div className='mobile__sidebar__cont'>
-            <div className='mobile__sidebar__blur'>
+            <div className='mobile__sidebar__blur' >
             </div>
-            <div className='mobile__menu'>
+            <div className='mobile__menu' ref={modalRef}>
               <div className='exit'>
                 <div className='btn__close'>
                     <img src={iconClose} alt="" onClick={() => setisOpen(false)}/>
