@@ -1,5 +1,5 @@
-import { avatarAisha, avatarArtura, avatarKady } from "../../assets/avatar";
-import { iconChart, iconCog, iconperson } from "../../assets/icons";
+import { avatarAisha, avatarArtura, avatarCristina, avatarCruz, avatarDrake, avatarGriffin, avatarKady, avatarNikita } from "../../assets/avatar";
+import { iconChart, iconCog, iconCross, iconperson } from "../../assets/icons";
 
 export const data = [{
     img:iconperson,
@@ -17,7 +17,21 @@ export const data = [{
     description:"Our customized platform with in-built analytics helps you manage your distributed teams."
 },
 ]
+export const dataContact = [{
+  img:iconperson,
+  title:"The quality of our talent network",
+},
+{
+  img:iconCog,
+  title:"Usage & implementation of our software",
+ 
+},
+{
+  img:iconChart,
+  title:"How we help drive innovation",
 
+},
+]
 export const SuccesStories = [
     {
         story:"“The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”",
@@ -40,5 +54,51 @@ export const SuccesStories = [
         img:avatarArtura
 
     }
+   
+]
+
+export const Meets = [
+    {
+      img:avatarNikita,
+      name:"Nikita Marks",
+      subtitle:"Founder & CEO",
+      plusImg:iconCross
+
+    },
+    {
+        img:avatarCristina,
+        name:"Christian Duncan",
+        subtitle:"Co-Founder & CEO",
+        plusImg:iconCross
+  
+      },
+      {
+        img:avatarCruz,
+        name:"Cruz Hamer",
+        subtitle:"Co-Founder & CTO",
+        plusImg:iconCross
+  
+      },
+      {
+        img:avatarDrake,
+        name:"Drake Heaton",
+        subtitle:"Business Development Lead",
+        plusImg:iconCross
+  
+      },
+      {
+        img:avatarGriffin,
+        name:"Griffin Wise",
+        subtitle:"Lead Marketing",
+        plusImg:iconCross
+  
+      },
+      {
+        img:avatarNikita,
+        name:"Aden Allan",
+        subtitle:"Head of Talent",
+        plusImg:iconCross
+  
+      }
    
 ]

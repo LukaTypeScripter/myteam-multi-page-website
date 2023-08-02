@@ -25,3 +25,9 @@ a {
   height: 100%;
   background-color: #014e56;
 }
+input {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}

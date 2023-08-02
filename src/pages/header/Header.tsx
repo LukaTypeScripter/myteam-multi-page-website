@@ -1,9 +1,8 @@
 
 import styled from 'styled-components'
-import{Link} from 'react-router-dom'
+import{Link, useNavigate} from 'react-router-dom'
 import { logoTeam } from '../../assets/logo'
 import { iconClose, iconHamburger } from '../../assets/icons'
-import Main from '../main/Main'
 import useMediaQuery from '../../hooks/useMediaQuery'
 import Button from '../../components/button/Button'
 import { useState } from 'react'
@@ -11,6 +10,7 @@ import { bgPaternAboutMobileNav } from '../../assets/bgs'
 const Header = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width:724px)");
   const [isOpen,setisOpen] = useState(false)
+  const navigate = useNavigate()
   return (
     <>
     <Headers>
@@ -30,7 +30,7 @@ const Header = () => {
             
           </div>
           <div style={{marginLeft:"auto"}}>
-          <Button Text='Contact Us' padding='9px 30px 8px' borderRadius='24px' border='2px solid transparent' bgColor='transparent' color='#fff' borderColor='#fff'/>
+          <Button Text='Contact Us' padding='9px 30px 8px' borderRadius='24px' border='2px solid transparent' bgColor='transparent' color='#fff' borderColor='#fff' onClick={() => navigate('/contact')}/>
           </div>
           </>
         )}

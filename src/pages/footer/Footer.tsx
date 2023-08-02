@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styled from 'styled-components'
 import { logoTeam } from '../../assets/logo'
 import { Link } from 'react-router-dom'

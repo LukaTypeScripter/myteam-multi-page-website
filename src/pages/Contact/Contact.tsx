@@ -1,9 +1,11 @@
-import React from 'react'
+
 import styled from 'styled-components'
 import { bgPaternHome6About } from '../../assets/bgs'
 import Button from '../../components/button/Button'
+import { useNavigate } from 'react-router-dom'
 
 function Contact() {
+  const navigate = useNavigate()
   return (
     <ContactCont>
         <h2>Ready to get started?</h2>
@@ -13,6 +15,7 @@ function Contact() {
         bgColor='transparent'
         borderRadius='24px'
         Text='Contact Us'
+        onClick={() => navigate('/contact')}
         />
     </ContactCont>
   )
