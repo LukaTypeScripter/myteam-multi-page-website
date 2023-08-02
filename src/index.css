@@ -1,10 +1,10 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,600;0,700;1,500&display=swap');
 
 body {
   width: 100%; 
   min-width: 375px;
   height: 100%;
-  font-family: Livvic,sans-serif;
+  font-family: 'Livvic', sans-serif;
   font-size: 15px;
   font-weight: 500;
   line-height: 25px;

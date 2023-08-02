@@ -23,10 +23,16 @@ const Header = () => {
           <img src={isOpen ? "" : iconHamburger} alt="" onClick={() => setisOpen(!isOpen)}/>
           </div>
         ) : (
+          <>
           <div className='main__header__desktop'>
             <Link to={"/"}>Home</Link>
             <Link to={"/about"} className='about'>About</Link>
+            
           </div>
+          <div style={{marginLeft:"auto"}}>
+          <Button Text='Contact Us' padding='9px 30px 8px' borderRadius='24px' border='2px solid transparent' bgColor='transparent' color='#fff' borderColor='#fff'/>
+          </div>
+          </>
         )}
           {isAboveMediumScreens && isOpen && (
             <div className='btn__cont'>
@@ -54,7 +60,6 @@ const Header = () => {
         )}
        
     </Headers>
-    <Main />
     </>
   )
 }
